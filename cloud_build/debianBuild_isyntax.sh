@@ -133,13 +133,18 @@ rm -rf boost_1_82_0
 #rm -rf openslide-3.4.1
 #apt-get purge -y autoconf
 
-# Enable python to find openslide library
 git clone https://github.com/innovationcore/openslide.git
 cd openslide
 git checkout origin/isyntax-support
+apt-get install -y autoconf automake libtool pkg-config
 autoreconf --install --force --verbose
 ./configure
+make -j12
 make install
+cd ..
+rm -rf openslide
+apt-get purge -y autoconf
+# Enable python to find openslide library
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 
 #9
