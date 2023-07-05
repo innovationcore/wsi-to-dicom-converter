@@ -148,20 +148,20 @@ apt-get purge -y autoconf
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 
 #9
-wget -O 1.9.5.zip https://github.com/open-source-parsers/jsoncpp/archive/refs/tags/1.9.5.zip > /dev/null
-unzip 1.9.5.zip  > /dev/null
-mkdir -p ./jsoncpp-1.9.5/build > /dev/null
-cd ./jsoncpp-1.9.5/build
-cmake -DCMAKE_BUILD_TYPE=release -DBUILD_STATIC_LIBS=OFF -DBUILD_SHARED_LIBS=ON -G "Unix Makefiles" ..
-make -j12
-make install
-cd ..
-cd ..
-rm -rf jsoncpp-1.9.5
+#wget -O 1.9.5.zip https://github.com/open-source-parsers/jsoncpp/archive/refs/tags/1.9.5.zip > /dev/null
+#unzip 1.9.5.zip  > /dev/null
+#mkdir -p ./jsoncpp-1.9.5/build > /dev/null
+#cd ./jsoncpp-1.9.5/build
+#cmake -DCMAKE_BUILD_TYPE=release -DBUILD_STATIC_LIBS=OFF -DBUILD_SHARED_LIBS=ON -G "Unix Makefiles" ..
+#make -j12
+#make install
+#cd ..
+#cd ..
+#rm -rf jsoncpp-1.9.5
 #10
-cp /usr/lib/x86_64-linux-gnu/glib-2.0/include/glibconfig.h /usr/include/glib-2.0/glibconfig.h
-mkdir build
-cd build
-cmake -DSTATIC_BUILD=ON -DTESTS_BUILD=ON ..
-make -j12
+#cp /usr/lib/x86_64-linux-gnu/glib-2.0/include/glibconfig.h /usr/include/glib-2.0/glibconfig.h
+#mkdir build
+#cd build
+#cmake -DSTATIC_BUILD=ON -DTESTS_BUILD=ON ..
+#make -j12
 #./gTests
