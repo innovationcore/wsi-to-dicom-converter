@@ -12,4 +12,4 @@ WORKDIR /opt
 RUN git clone https://github.com/innovationcore/wsi-to-dicom-converter
 WORKDIR /opt/wsi-to-dicom-converter
 RUN chmod +x /opt/wsi-to-dicom-converter/cloud_build/debianBuild_isyntax.sh
-RUN /opt/wsi-to-dicom-converter/cloud_build/debianBuild_isyntax.sh
+#RUN /opt/wsi-to-dicom-converter/cloud_build/debianBuild_isyntax.sh
