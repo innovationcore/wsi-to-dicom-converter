@@ -4,6 +4,8 @@ ARG DEBIAN_FRONTEND=noninteractive
 #get dep
 RUN apt-get update
 RUN apt-get install -y git
+RUN apt-get install autoconf -y
+RUN apt-get -y install libtool
 
 #build WSI convert
 WORKDIR /opt
