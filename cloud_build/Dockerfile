@@ -1,8 +1,9 @@
 FROM ubuntu:22.04
 ARG DEBIAN_FRONTEND=noninteractive
 
-RUN RUN apt-get update
-RUN RUN apt-get install -y git
+#get dep
+RUN apt-get update
+RUN apt-get install -y git
 
 #build WSI convert
 WORKDIR /opt
