@@ -118,30 +118,21 @@ cd boost_1_82_0
 ./b2 install > /dev/null
 cd ..
 rm -rf boost_1_82_0
-
 # 8
-#wget -O openslide-3.4.1.tar.gz https://github.com/openslide/openslide/releases/download/v3.4.1/openslide-3.4.1.tar.gz > /dev/null
-#tar xvzf openslide-3.4.1.tar.gz > /dev/null
-#rm openslide-3.4.1.tar.gz
-#cd openslide-3.4.1
-#apt-get install -y autoconf automake libtool pkg-config
-#autoreconf -i
-#./configure
-#make -j12
-#make install
-#cd ..
-#rm -rf openslide-3.4.1
-#apt-get purge -y autoconf
-
-# Enable python to find openslide library
-git clone https://github.com/innovationcore/openslide.git
-cd openslide
-git checkout origin/isyntax-support
-autoreconf --install --force --verbose
+wget -O openslide-3.4.1.tar.gz https://github.com/openslide/openslide/releases/download/v3.4.1/openslide-3.4.1.tar.gz > /dev/null
+tar xvzf openslide-3.4.1.tar.gz > /dev/null
+rm openslide-3.4.1.tar.gz
+cd openslide-3.4.1
+apt-get install -y autoconf automake libtool pkg-config
+autoreconf -i
 ./configure
+make -j12
 make install
+cd ..
+rm -rf openslide-3.4.1
+apt-get purge -y autoconf
+# Enable python to find openslide library
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
-
 #9
 wget -O 1.9.5.zip https://github.com/open-source-parsers/jsoncpp/archive/refs/tags/1.9.5.zip > /dev/null
 unzip 1.9.5.zip  > /dev/null
