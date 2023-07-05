@@ -9,5 +9,4 @@ RUN apt-get install -y git
 WORKDIR /opt
 RUN git clone https://github.com/innovationcore/wsi-to-dicom-converter
 WORKDIR /opt/wsi-to-dicom-converter
-RUN git checkout origin/isyntax-support
 RUN opt/wsi-to-dicom-converter/cloud_build/debianBuild_isyntax.sh
